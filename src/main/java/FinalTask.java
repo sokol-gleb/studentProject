@@ -20,11 +20,6 @@ public class FinalTask {
                 else{
                     list3.add(i);
                 }
-//            if ((foo.charAt(0)!='1' || foo.charAt(0)!='2' || foo.charAt(0)!='3') && (foo.charAt(1)!='1' || foo.charAt(1)!='2' || foo.charAt(1)!='3') && (foo.charAt(2)!='1' || foo.charAt(2)!='2' || foo.charAt(2)!='3') && (foo.charAt(3)!='1' || foo.charAt(3)!='2' || foo.charAt(3)!='3') && (foo.charAt(4)!='1' || foo.charAt(4)!='2' || foo.charAt(4)!='3') && (foo.charAt(5)!='1' || foo.charAt(5)!='2' || foo.charAt(5)!='3') && (foo.charAt(6)!='1' || foo.charAt(6)!='2' || foo.charAt(6)!='3') && (foo.charAt(7)!='1' || foo.charAt(7)!='2' || foo.charAt(7)!='3')){
-//                list2.add(i);
-//            }
-//            else{
-//                list3.add(i);
             }
         }
 
@@ -40,4 +35,3 @@ public class FinalTask {
         System.out.println(finalList);
     }
 }
-//||
