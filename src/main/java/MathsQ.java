@@ -1,10 +1,11 @@
 public class MathsQ {
+
     public static void main(String[] args) {
         int max = 33_333_333;
         int min = 11_111_111;
         int n = max - min;
         int count=0;
-//1 2 3
+
         for (int i = 0, k = min; i < n; i++, k++) {
             if (consist(k) && k % 18 == 0) {
                 count++;
