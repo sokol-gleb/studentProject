@@ -1,3 +1,5 @@
+package homework1;
+
 import java.util.Scanner;
 
 public class Task2 {
@@ -19,7 +21,6 @@ public class Task2 {
         int max1 = max(a, b); //Math.max
         int max2 = max(c, d);
         return max(max1,max2);
-
     }
 
     private static int max(int a, int b) {

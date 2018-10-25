@@ -1,3 +1,5 @@
+package homework1;
+
 public class MathsQ {
 
     public static void main(String[] args) {
