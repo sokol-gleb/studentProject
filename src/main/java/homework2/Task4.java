@@ -7,13 +7,38 @@ public class Task4 {
 
     public static void main(String[] args) {
         int num = enterNum();
-        String line = String.valueOf(num);
 
-        boolean end = false;
-        end = checking(end, line);
-        if (end) {
-            System.out.println();
+        if (check(num)) {
+            System.out.println("Palindrome ");
         }
+        else{
+            System.out.println("Not a palindrome");
+        }
+
+    }
+
+    private static boolean check(int num) {
+        int[] arr = new int[8];
+        arr[0] = num / 10_000_000;
+        arr[1] = num / 1_000_000 - (arr[0] * 10);
+        arr[2] = num / 100_000 - (arr[0] * 100 + arr[1] * 10);
+        arr[3] = num / 10_000 - (arr[0] * 1_000 + arr[1] * 100 + arr[2] * 10);
+        arr[4] = num / 1_000 - (arr[0] * 10_000 + arr[1] * 1_000 + arr[2] * 100 + arr[3] * 10);
+        arr[5] = num / 100 - (arr[0] * 100_000 + arr[1] * 10_000 + arr[2] * 1_000 + arr[3] * 100 + arr[4] * 10);
+        arr[6] = num / 10 - (arr[0] * 1_000_000 + arr[1] * 100_000 + arr[2] * 10_000 + arr[3] * 1_000 + arr[4] * 100 + arr[5] * 10);
+        arr[7] = num % 10;
+
+        return checkDigits(arr);
+    }
+
+    private static boolean checkDigits(int[] arr) {
+        boolean isSame = true;
+        for (int i = 0; i < 4; i++) {
+            if (arr[i] != arr[7 - i]) {
+                isSame = false;
+            }
+        }
+        return isSame;
     }
 
     private static int enterNum() {
@@ -21,19 +46,5 @@ public class Task4 {
         return SCANNER.nextInt();
     }
 
-    private static boolean checking(boolean end, String check) {
-        for (int i = 0; i < check.length(); i++) {
-            for (int j = check.length(); j > 0; j--) {
-                if (check.charAt(i) == check.charAt(j)) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        }
-        return end;
-    }
-}
 
-// 1234 4321
-// 1
+}
